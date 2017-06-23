@@ -61,19 +61,7 @@ public abstract class FlockingSimulator {
 
 
 
-    public static void main(String[] args){
-        FlockingSimulatorConfig config = new FlockingSimulatorConfig();
-        FalconConfig falconConfig = new FalconConfig();
-
-        config.setImmediateRewardProvided(true);
-
-        falconConfig.numAction = FalconBoidAgent.numAction;
-        falconConfig.numState = config.numState();
-        falconConfig.numReward = 2;
-
-        FlockingSimulator simulator = CommandLineUtils.procCommandLines(args, config, falconConfig);
-        simulator.runSims();
-    }
+    
 
     public FalconConfig getFalconConfig(){
         return falconConfig;
